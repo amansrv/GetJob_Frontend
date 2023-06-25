@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from "react";
+import React from 'react';
 import {
   Button,
   Chip,
@@ -767,7 +768,7 @@ const AcceptedApplicants = (props) => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <Grid
         container
         item
@@ -816,7 +817,7 @@ const AcceptedApplicants = (props) => {
           setFilterOpen(false);
         }}
       />
-    </>
+    </React.Fragment>
   );
 };
 

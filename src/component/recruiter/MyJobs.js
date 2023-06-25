@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from "react";
+import React from 'react';
 import {
   Button,
   Chip,
@@ -371,7 +372,7 @@ const FilterPopup = (props) => {
               item
               xs={9}
               justify="space-around"
-              // alignItems="center"
+            // alignItems="center"
             >
               <Grid item>
                 <FormControlLabel
@@ -786,7 +787,7 @@ const MyJobs = (props) => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <Grid
         container
         item
@@ -868,7 +869,7 @@ const MyJobs = (props) => {
           setFilterOpen(false);
         }}
       />
-    </>
+    </React.Fragment>
   );
 };
 

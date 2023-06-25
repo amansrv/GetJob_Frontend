@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { Grid, Button, TextField, LinearProgress } from "@material-ui/core";
 import { CloudUpload } from "@material-ui/icons";
 import Axios from "axios";
+import React from 'react';
 
 import { SetPopupContext } from "../App";
 
@@ -70,11 +71,11 @@ const FileUploadInput = (props) => {
                 setUploadPercentage(0);
                 setFile(event.target.files[0]);
               }}
-              // onChange={onChange}
-              // onChange={
-              //   (e) => {}
-              //   //   setSource({ ...source, place_img: e.target.files[0] })
-              // }
+            // onChange={onChange}
+            // onChange={
+            //   (e) => {}
+            //   //   setSource({ ...source, place_img: e.target.files[0] })
+            // }
             />
           </Button>
         </Grid>

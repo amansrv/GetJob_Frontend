@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from 'react';
 import {
   FormControl,
   InputLabel,
@@ -22,7 +23,7 @@ const PasswordInput = (props) => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <FormControl variant="outlined" error={props.error ? props.error : null}>
         <InputLabel htmlFor="outlined-adornment-password">
           {props.label}
@@ -51,7 +52,7 @@ const PasswordInput = (props) => {
           <FormHelperText>{props.helperText}</FormHelperText>
         ) : null}
       </FormControl>
-    </>
+    </React.Fragment>
   );
 };
 

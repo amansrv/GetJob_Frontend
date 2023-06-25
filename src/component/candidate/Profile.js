@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import React from 'react';
 import {
   Button,
   Grid,
@@ -36,7 +37,7 @@ const MultifieldInput = (props) => {
   const { education, setEducation } = props;
 
   return (
-    <>
+    <React.Fragment>
       {education.map((obj, key) => (
         <Grid item container className={classes.inputBox} key={key}>
           <Grid item xs={6}>
@@ -99,7 +100,7 @@ const MultifieldInput = (props) => {
           Add another institution details
         </Button>
       </Grid>
-    </>
+    </React.Fragment>
   );
 };
 
@@ -215,7 +216,7 @@ const Profile = (props) => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <Grid
         container
         item
@@ -311,7 +312,7 @@ const Profile = (props) => {
       {/* <Modal open={open} onClose={handleClose} className={classes.popupDialog}> */}
 
       {/* </Modal> */}
-    </>
+    </React.Fragment>
   );
 };
 

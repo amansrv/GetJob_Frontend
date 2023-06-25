@@ -5,6 +5,7 @@ import {
   Button,
   makeStyles,
 } from "@material-ui/core";
+import React from 'react';
 import { useHistory } from "react-router-dom";
 
 import isAuth, { userType } from "../lib/isAuth";
@@ -40,7 +41,7 @@ const Navbar = (props) => {
         </Typography>
         {isAuth() ? (
           userType() === "recruiter" ? (
-            <>
+            <React.Fragment>
               <Button color="inherit" onClick={() => handleClick("/home")}>
                 Home
               </Button>
@@ -59,9 +60,9 @@ const Navbar = (props) => {
               <Button color="inherit" onClick={() => handleClick("/logout")}>
                 Logout
               </Button>
-            </>
+            </React.Fragment>
           ) : (
-            <>
+            <React.Fragment>
               <Button color="inherit" onClick={() => handleClick("/home")}>
                 Home
               </Button>
@@ -83,10 +84,10 @@ const Navbar = (props) => {
 
 
 
-            </>
+            </React.Fragment>
           )
         ) : (
-          <>
+          <React.Fragment>
 
             <Button color="inherit" onClick={() => handleClick("/login")}>
               Logins
@@ -94,7 +95,7 @@ const Navbar = (props) => {
             <Button color="inherit" onClick={() => handleClick("/signup")}>
               Signup
             </Button>
-          </>
+          </React.Fragment>
         )}
       </Toolbar>
     </AppBar>

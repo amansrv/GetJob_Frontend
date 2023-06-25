@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from "react";
+import React from 'react';
 import {
   Button,
   Chip,
@@ -80,7 +81,7 @@ const FilterPopup = (props) => {
               item
               xs={9}
               justify="space-around"
-              // alignItems="center"
+            // alignItems="center"
             >
               <Grid item>
                 <FormControlLabel
@@ -424,7 +425,7 @@ const ApplicationTile = (props) => {
 
   const buttonSet = {
     applied: (
-      <>
+      <React.Fragment>
         <Grid item xs>
           <Button
             className={classes.statusBlock}
@@ -449,10 +450,10 @@ const ApplicationTile = (props) => {
             Reject
           </Button>
         </Grid>
-      </>
+      </React.Fragment>
     ),
     shortlisted: (
-      <>
+      <React.Fragment>
         <Grid item xs>
           <Button
             className={classes.statusBlock}
@@ -477,10 +478,10 @@ const ApplicationTile = (props) => {
             Reject
           </Button>
         </Grid>
-      </>
+      </React.Fragment>
     ),
     rejected: (
-      <>
+      <React.Fragment>
         <Grid item xs>
           <Paper
             className={classes.statusBlock}
@@ -492,10 +493,10 @@ const ApplicationTile = (props) => {
             Rejected
           </Paper>
         </Grid>
-      </>
+      </React.Fragment>
     ),
     accepted: (
-      <>
+      <React.Fragment>
         <Grid item xs>
           <Paper
             className={classes.statusBlock}
@@ -507,10 +508,10 @@ const ApplicationTile = (props) => {
             Accepted
           </Paper>
         </Grid>
-      </>
+      </React.Fragment>
     ),
     cancelled: (
-      <>
+      <React.Fragment>
         <Grid item xs>
           <Paper
             className={classes.statusBlock}
@@ -522,10 +523,10 @@ const ApplicationTile = (props) => {
             Cancelled
           </Paper>
         </Grid>
-      </>
+      </React.Fragment>
     ),
     finished: (
-      <>
+      <React.Fragment>
         <Grid item xs>
           <Paper
             className={classes.statusBlock}
@@ -537,7 +538,7 @@ const ApplicationTile = (props) => {
             Finished
           </Paper>
         </Grid>
-      </>
+      </React.Fragment>
     ),
   };
 
@@ -579,9 +580,8 @@ const ApplicationTile = (props) => {
             Education:{" "}
             {application.jobApplicant.education
               .map((edu) => {
-                return `${edu.institutionName} (${edu.startYear}-${
-                  edu.endYear ? edu.endYear : "Ongoing"
-                })`;
+                return `${edu.institutionName} (${edu.startYear}-${edu.endYear ? edu.endYear : "Ongoing"
+                  })`;
               })
               .join(", ")}
           </Grid>
@@ -626,7 +626,7 @@ const ApplicationTile = (props) => {
             variant="contained"
             color="primary"
             style={{ padding: "10px 50px" }}
-            // onClick={() => changeRating()}
+          // onClick={() => changeRating()}
           >
             Submit
           </Button>
@@ -726,7 +726,7 @@ const JobApplications = (props) => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <Grid
         container
         item
@@ -775,7 +775,7 @@ const JobApplications = (props) => {
           setFilterOpen(false);
         }}
       />
-    </>
+    </React.Fragment>
   );
 };
 

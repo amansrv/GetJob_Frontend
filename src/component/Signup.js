@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import React from 'react';
 import {
   Grid,
   TextField,
@@ -42,7 +43,7 @@ const MultifieldInput = (props) => {
   const { education, setEducation } = props;
 
   return (
-    <>
+    <React.Fragment>
       {education.map((obj, key) => (
         <Grid
           item
@@ -110,7 +111,7 @@ const MultifieldInput = (props) => {
           Add another institution details
         </Button>
       </Grid>
-    </>
+    </React.Fragment>
   );
 };
 
@@ -392,7 +393,7 @@ const Login = (props) => {
           />
         </Grid>
         {signupDetails.type === "applicant" ? (
-          <>
+          <React.Fragment>
             <MultifieldInput
               education={education}
               setEducation={setEducation}
@@ -442,9 +443,9 @@ const Login = (props) => {
                 identifier={"profile"}
               />
             </Grid>
-          </>
+          </React.Fragment>
         ) : (
-          <>
+          <React.Fragment>
             <Grid item style={{ width: "100%" }}>
               <TextField
                 label="Bio (upto 250 words)"
@@ -471,7 +472,7 @@ const Login = (props) => {
                 onChange={(phone) => setPhone(phone)}
               />
             </Grid>
-          </>
+          </React.Fragment>
         )}
 
         <Grid item>

@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import React from 'react';
 import {
   Button,
   Grid,
@@ -115,7 +116,7 @@ const Profile = (props) => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <Grid
         container
         item
@@ -195,7 +196,7 @@ const Profile = (props) => {
           </Paper>
         </Grid>
       </Grid>
-    </>
+    </React.Fragment>
   );
 };
 
